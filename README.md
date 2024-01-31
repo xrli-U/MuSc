@@ -6,7 +6,7 @@ Authors:  [Xurui Li](https://github.com/xrli-U)<sup>1*</sup> | [Ziming Huang](ht
 
 Institutions: <sup>1</sup>Huazhong University of Science and Technology | <sup>2</sup>Wuhan JingCe Electronic Group Co.,LTD | <sup>3</sup>University of Trento
 
-### 🧐  [Arxiv]()
+### 🧐  [Arxiv](https://arxiv.org/pdf/2401.16753.pdf)
 
 ## 👇Abstract
 
@@ -175,4 +175,5 @@ optimized_classification_results = Mobile_RsCIN(classification_results, k_list=k
 
 Our repo is built on [PatchCore](https://github.com/amazon-science/patchcore-inspection) and [APRIL-GAN](https://github.com/ByChelsea/VAND-APRIL-GAN), thanks their clear and elegant code !
 
-
+## License
+MuSc is released under the MIT Licence, and is fully open for academic research and also allow free commercial usage. To apply for a commercial license, please contact yuzhou@hust.edu.cn.
