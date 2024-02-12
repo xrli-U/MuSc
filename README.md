@@ -6,7 +6,7 @@ Authors:  [Xurui Li](https://github.com/xrli-U)<sup>1*</sup> | [Ziming Huang](ht
 
 Institutions: <sup>1</sup>Huazhong University of Science and Technology | <sup>2</sup>Wuhan JingCe Electronic Group Co.,LTD | <sup>3</sup>University of Trento
 
-### 🧐  [Arxiv](https://arxiv.org/pdf/2401.16753.pdf)
+### 🧐  [Arxiv](https://arxiv.org/pdf/2401.16753.pdf) | [OpenReview](https://openreview.net/forum?id=AHgc5SMdtd)
 
 ## 👇Abstract
 
