@@ -65,10 +65,13 @@ class LNAMD(torch.nn.Module):
     def __init__(self, device, feature_dim=1024, feature_layer=[1,2,3,4], r=3, patchstride=1):
         super(LNAMD, self).__init__()
         self.device = device
+        self.r = r
         self.patch_maker = PatchMaker(r, stride=patchstride)
         self.LNA = Preprocessing(feature_layer, feature_dim)
 
     def _embed(self, features):
+        B = features[0].shape[0]
+
         features_layers = []
         for feature in features:
             # reshape and layer normalization
@@ -81,14 +84,22 @@ class LNAMD(torch.nn.Module):
             feature = torch.nn.LayerNorm([feature.shape[1], feature.shape[2],
                                           feature.shape[3]]).to(self.device)(feature)
             features_layers.append(feature)
-        # divide into patches
-        features_layers = [self.patch_maker.patchify(x, return_spatial_info=True) for x in features_layers]
-        patch_shapes = [x[1] for x in features_layers]
-        features_layers = [x[0] for x in features_layers]
+
+        if self.r != 1:
+            # divide into patches
+            features_layers = [self.patch_maker.patchify(x, return_spatial_info=True) for x in features_layers]
+            patch_shapes = [x[1] for x in features_layers]
+            features_layers = [x[0] for x in features_layers]
+        else:
+            patch_shapes = [f.shape[-2:] for f in features_layers]
+            features_layers = [f.reshape(f.shape[0], f.shape[1], -1, 1, 1).permute(0, 2, 1, 3, 4) for f in features_layers]
+
         ref_num_patches = patch_shapes[0]
         for i in range(1, len(features_layers)):
-            _features = features_layers[i]
             patch_dims = patch_shapes[i]
+            if patch_dims[0] == ref_num_patches[0] and patch_dims[1] == ref_num_patches[1]:
+                continue
+            _features = features_layers[i]
             _features = _features.reshape(
                 _features.shape[0], patch_dims[0], patch_dims[1], *_features.shape[2:]
             )
@@ -109,8 +120,22 @@ class LNAMD(torch.nn.Module):
             _features = _features.reshape(len(_features), -1, *_features.shape[-3:])
             features_layers[i] = _features
         features_layers = [x.reshape(-1, *x.shape[-3:]) for x in features_layers]
+        
         # aggregation
         features_layers = self.LNA(features_layers)
+        features_layers = features_layers.reshape(B, -1, *features_layers.shape[-2:])   # (B, L, layer, C)
 
         return features_layers.detach().cpu()
 
+
+if __name__ == "__main__":
+    import time
+    device = 'cuda:0'
+    LNAMD_r = LNAMD(device=device, r=3, feature_dim=1024, feature_layer=[1,2,3,4])
+    B = 32
+    patch_tokens = [torch.rand((B, 1370, 1024)), torch.rand((B, 1370, 1024)), torch.rand((B, 1370, 1024)), torch.rand((B, 1370, 1024))]
+    patch_tokens = [f.to('cuda:0') for f in patch_tokens]
+    s = time.time()
+    features = LNAMD_r._embed(patch_tokens)
+    e = time.time()
+    print((e-s)*1000/32)

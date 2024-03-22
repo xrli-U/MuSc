@@ -29,9 +29,9 @@ def cal_pro_score(masks, amaps, max_step=200, expect_fpr=0.3):
     return pro_auc
 
 
-def compute_metrics(gt_sp, pr_sp, gt_px, pr_px):
+def compute_metrics(gt_sp=None, pr_sp=None, gt_px=None, pr_px=None):
     # classification
-    if gt_sp.sum() == 0 or gt_sp.sum() == gt_sp.shape[0]:
+    if gt_sp is None or pr_sp is None or gt_sp.sum() == 0 or gt_sp.sum() == gt_sp.shape[0]:
         auroc_sp, f1_sp, ap_sp = 0, 0, 0
     else:
         auroc_sp = roc_auc_score(gt_sp, pr_sp)
@@ -39,13 +39,17 @@ def compute_metrics(gt_sp, pr_sp, gt_px, pr_px):
         precisions, recalls, thresholds = precision_recall_curve(gt_sp, pr_sp)
         f1_scores = (2 * precisions * recalls) / (precisions + recalls)
         f1_sp = np.max(f1_scores[np.isfinite(f1_scores)])
+
     # segmentation
-    auroc_px = roc_auc_score(gt_px.ravel(), pr_px.ravel())
-    ap_px = average_precision_score(gt_px.ravel(), pr_px.ravel())
-    precisions, recalls, thresholds = precision_recall_curve(gt_px.ravel(), pr_px.ravel())
-    f1_scores = (2 * precisions * recalls) / (precisions + recalls)
-    f1_px = np.max(f1_scores[np.isfinite(f1_scores)])
-    aupro = cal_pro_score(gt_px.squeeze(), pr_px.squeeze())
+    if gt_px is None or pr_px is None or gt_px.sum() == 0:
+        auroc_px, f1_px, ap_px, aupro = 0, 0, 0, 0
+    else:
+        auroc_px = roc_auc_score(gt_px.ravel(), pr_px.ravel())
+        ap_px = average_precision_score(gt_px.ravel(), pr_px.ravel())
+        precisions, recalls, thresholds = precision_recall_curve(gt_px.ravel(), pr_px.ravel())
+        f1_scores = (2 * precisions * recalls) / (precisions + recalls)
+        f1_px = np.max(f1_scores[np.isfinite(f1_scores)])
+        aupro = cal_pro_score(gt_px.squeeze(), pr_px.squeeze())
 
     image_metric = [auroc_sp, f1_sp, ap_sp]
     pixel_metric = [auroc_px, f1_px, ap_px, aupro]

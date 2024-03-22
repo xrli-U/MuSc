@@ -1,39 +1,36 @@
 # ✨MuSc (ICLR 2024)✨
 
-**This is an official PyTorch implementation for "MuSc : Zero-Shot Industrial Anomaly Classification and Segmentation with Mutual Scoring of the Unlabeled Images" (MuSc)**
+**论文“MuSc: Zero-Shot Industrial Anomaly Classification and Segmentation with Mutual Scoring of the Unlabeled Images”的官方复现代码**
 
-Authors:  [Xurui Li](https://github.com/xrli-U)<sup>1*</sup> | [Ziming Huang](https://github.com/ZimingHuang1)<sup>1*</sup> | [Feng Xue](https://xuefeng-cvr.github.io/)<sup>3</sup> | [Yu Zhou](https://github.com/zhouyu-hust)<sup>1,2</sup>
+作者:  [李煦蕤](https://github.com/xrli-U)<sup>1*</sup> | [黄子鸣](https://github.com/ZimingHuang1)<sup>1*</sup> | [薛峰](https://xuefeng-cvr.github.io/)<sup>3</sup> | [周瑜](https://github.com/zhouyu-hust)<sup>1,2</sup>
 
-Institutions: <sup>1</sup>Huazhong University of Science and Technology | <sup>2</sup>Wuhan JingCe Electronic Group Co.,LTD | <sup>3</sup>University of Trento
+单位: <sup>1</sup>华中科技大学 | <sup>2</sup>武汉精测电子集团股份有限公司 | <sup>3</sup>特伦托大学
 
-### 🧐  [Arxiv](https://arxiv.org/pdf/2401.16753.pdf) | [OpenReview](https://openreview.net/forum?id=AHgc5SMdtd)
+### 🧐 论文下载地址： [Arxiv](https://arxiv.org/pdf/2401.16753.pdf) | [OpenReview](https://openreview.net/forum?id=AHgc5SMdtd)
 
-### 📖 Chinese [README](./README_cn.md)
+## 📣更新日志:
+***2024年3月22日***
+1. 我们提供了支持[BTAD](https://ieeexplore.ieee.org/abstract/document/9576231)数据集的运行代码，详见`scripts/musc.sh`。
+2. 我们修改了代码使其支持更大的*batch_size*。
+3. 我们优化了部分代码实现更快的速度。
+4. 我们提供了在MVTec AD，VisA和BTAD数据集上，<a href='#results_backbones'>使用不同特征提取器的结果</a>。
+5. 我们提供了不同数据集的<a href='#results_datasets'>详细结果</a>。
+6. 我们提供了不同特征提取器的<a href='#inference_time'>推理时间</a>。
+7. 我们提供了与当前最先进的<a href='#compare_sota'>零样本/少样本方法的对比结果</a>，该表格将会持续更新。
+8. 我们汇总了用户在使用MuSc过程中反馈回的<a href='#FAQ'>常见问题</a>，并给出了解答。
 
-## 📣Updates:
-***03/22/2024***
-1. The supported codes for [BTAD](https://ieeexplore.ieee.org/abstract/document/9576231) dataset are provided.
-2. Some codes are modified to support larger *batch_size*.
-3. Some codes are optimized to obtain faster speeds.
-4. <a href='#results_backbones'>Results of different backbones</a> in MVTec AD, VisA and BTAD datasets are provided.
-5. <a href='#results_datasets'>The detailed results of different datasets</a> are provided.
-6. <a href='#inference_time'>The inference time of different backbones</a> is provided.
-7. <a href='#compare_sota'>The comparisons with SOTA zero/few-shot methods</a> are provided. This table will be updated continuously.
-8. We summarize the <a href='#FAQ'> frequently asked questions </a> from users when using MuSc, and give the answers.
-9. We add [README](./README_cn.md) in Chinese.
+***2024年2月1日***
 
-***02/01/2024***
+初始版本：
 
-Initial commits:
-
-1. The complete code of our method **MuSc** in [paper](https://arxiv.org/pdf/2401.16753.pdf) is released.
-2. This code is compatible with image encoder (ViT) of [CLIP](https://github.com/mlfoundations/open_clip) and ViT pre-trained with [DINO](https://github.com/facebookresearch/dino)/[DINO_v2](https://github.com/facebookresearch/dinov2).
+1. 我们提供了[该论文](https://arxiv.org/pdf/2401.16753.pdf)中的**MuSc**方法完整实现代码。
+2. 该代码的特征提取器支持[CLIP](https://github.com/mlfoundations/open_clip)、[DINO](https://github.com/facebookresearch/dino)和[DINO_v2](https://github.com/facebookresearch/dinov2)预训练的vision transformer。
 
 <span id='compare_sota'/>
 
 ## 🎖️Compare with SOTA *k*-shot methods
-We will continuously update the following table to compare our MuSc with the newest zero-shot and few-shot methods.
-"-" indicates that the authors did not measure this metric in their paper.
+我们在下表中展示了我们的MuSc方法与当前最先进的零样本/少样本方法的对比结果，该表格将持续更新。
+"-"表示作者在原论文中未提供该指标。
 
 ### MVTec AD
 
@@ -71,68 +68,75 @@ We will continuously update the following table to compare our MuSc with the new
 
 <span id='all_catelogue'/>
 
-## 📖Catalogue
+## 📖目录
 
-* <a href='#abstract'>1. Abstract</a>
-* <a href='#setup'>2. Environment setup</a>
-* <a href='#datasets'>3. Datasets download</a>
+* <a href='#abstract'>1. 论文介绍</a>
+* <a href='#setup'>2. 代码运行环境配置</a>
+* <a href='#datasets'>3. 数据集下载</a>
   * <a href='#datatets_mvtec_ad'>MVTec AD</a>
   * <a href='#datatets_visa'>VisA</a>
   * <a href='#datatets_btad'>BTAD</a>
-* <a href='#run_musc'>4. Run MuSc</a>
-* <a href='#rscin'>5. Run RsCIN</a>
-* <a href='#results_datasets'>6. Results of different datasets</a>
-* <a href='#results_backbones'>7. Results of different backbones</a>
-* <a href='#inference_time'>8. Inference time</a>
-* <a href='#FAQ'>9. Frequently Asked Questions</a>
-* <a href='#citation'>10. Citation</a>
-* <a href='#thanks'>11. Thanks</a>
-* <a href='#license'>12. License</a>
+* <a href='#run_musc'>4. 运行代码</a>
+* <a href='#rscin'>5. 单独运行RsCIN分类优化模块</a>
+* <a href='#results_datasets'>6. 在不同数据上的结果</a>
+* <a href='#results_backbones'>7. 使用不同特征提取器的结果</a>
+* <a href='#inference_time'>8. 推理时间</a>
+* <a href='#FAQ'>9. 常见问题</a>
+* <a href='#citation'>10. 引用格式</a>
+* <a href='#thanks'>11. 致谢</a>
+* <a href='#license'>12. 使用许可</a>
 
 <span id='abstract'/>
 
-## 👇Abstract: <a href='#all_catelogue'>[Back to Top]</a>
+## 👇论文介绍: <a href='#all_catelogue'>[返回目录]</a>
 
-This paper studies zero-shot anomaly classification (AC) and segmentation (AS) in industrial vision. We reveal that the abundant normal and abnormal cues implicit in unlabeled test images can be exploited for anomaly determination, which is ignored by prior methods. Our key observation is that for the industrial product images, the normal image patches could find a relatively large number of similar patches in other unlabeled images, while the abnormal ones only have a few similar patches. 
+该论文研究了工业视觉领域中的零样本异常检测和分割任务。
+零样本，即不使用任何与测试图像同源的有标注图像，以往的方法基于CLIP的图文对齐能力和SAM的提示工程，忽略了无标签测试图像本身蕴含的丰富正常先验信息。
+本论文的关键发现在于工业产品图像中，图像的正常区域可以在其他无标注的图像中找到相对大量的相似的正常区域，而异常区域只能找到少量相似的区域。
+我们利用这种特性设计了一种新的零样本异常检测/分割方法MuSc，该方法的核心在于对无标注的图像进行相互打分，正常区域会被赋予较低的分数，异常区域会被赋予较高的分数。
+该方法不需要任何辅助数据集进行训练，也不需要额外的文本模态进行提示。
 
-We leverage such a discriminative characteristic to design a novel zero-shot AC/AS method by Mutual Scoring (MuSc) of the unlabeled images, which does not need any training or prompts. Specifically, we perform Local Neighborhood Aggregation with Multiple Degrees (**LNAMD**) to obtain the patch features that are capable of representing anomalies in varying sizes. Then we propose the Mutual Scoring Mechanism (**MSM**) to leverage the unlabeled test images to assign the anomaly score to each other. Furthermore, we present an optimization approach named Re-scoring with Constrained Image-level Neighborhood (**RsCIN**) for image-level anomaly classification to suppress the false positives caused by noises in normal images.
+具体而言，我们首先使用多聚合度邻域聚合模块(**LNAMD**)来获取能够表征不同大小缺陷的区域级特征。
+然后我们提出了互打分模块(**MSM**)，使用无标注图像进行相互打分，分数越高表示该图像区域异常概率越大。
+最后，我们提出了一个分类优化模块，名为图像级受限邻域的重打分(**RsCIN**)，来优化分类结果，减少噪声带来的误检。
 
-The superior performance on the challenging MVTec AD and VisA datasets demonstrates the effectiveness of our approach. Compared with the state-of-the-art zero-shot approaches, MuSc achieves a $\textbf{21.1}$\% PRO absolute gain (from 72.7\% to 93.8\%) on MVTec AD, a $\textbf{19.4}$\% pixel-AP gain and a $\textbf{14.7}$\% pixel-AUROC gain on VisA. In addition, our zero-shot approach outperforms most of the few-shot approaches and is comparable to some one-class methods.
+我们通过在MVTec AD和VisA数据集上的优异性能证明了我们方法的有效性，与当前SOTA零样本异常检测方法相比，MuSc在MVTec AD数据集上实现了$\textbf{21.1}$％的PRO提升(从72.7％到93.8％)，在VisA上实现了$\textbf{19.4}$％的AP分割提升和$\textbf{14.7}$％的AUROC分割提升。
+此外，我们的零样本方法甚至优于当前大多数少样本方法，并且与一些无监督方法相媲美。
 
 ![pipline](./assets/pipeline.png) 
 
-## 😊Compare with other 0-shot methods
+## 😊与其它零样本异常检测方法比较
 
 ![Compare_0](./assets/compare_zero_shot.png) 
 
-## 😊Compare with other 4-shot methods
+## 😊与其它少样本异常检测方法比较
 
 ![Compare_4](./assets/compare_few_shot.png) 
 
 <span id='setup'/>
 
-## 🎯Setup: <a href='#all_catelogue'>[Back to Top]</a>
+## 🎯代码环境配置: <a href='#all_catelogue'>[返回目录]</a>
 
-### Environment:
+### 环境:
 
 - Python 3.8
 - CUDA 11.7
 - PyTorch 2.0.1
 
-Clone the repository locally:
+使用如下命令克隆该项目到本地:
 
 ```
 git clone https://github.com/xrli-U/MuSc.git
 ```
 
-Create virtual environment:
+创建虚拟环境:
 
 ```
 conda create --name musc python=3.8
 conda activate musc
 ```
 
-Install the required packages:
+安装依赖库:
 
 ```
 pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2
@@ -141,9 +145,9 @@ pip install -r requirements.txt
 
 <span id='datasets'/>
 
-## 👇Datasets Download: <a href='#all_catelogue'>[Back to Top]</a>
+## 👇数据集下载: <a href='#all_catelogue'>[返回目录]</a>
 
-Put all the datasets in `./data` folder.
+把所有的数据集放在`./data`文件夹下。
 
 <span id='datatets_mvtec_ad'/>
 
@@ -182,7 +186,7 @@ data
 |-----|--- ...
 ```
 
-VisA dataset need to be preprocessed to separate the train set from the test set.
+VisA dataset需要使用如下程序划分训练集和测试集。
 
 ```
 python ./datasets/visa_preprocess.py
@@ -205,83 +209,83 @@ data
 
 <span id='run_musc'/>
 
-## 💎Run MuSc: <a href='#all_catelogue'>[Back to Top]</a>
+## 💎运行主程序: <a href='#all_catelogue'>[返回目录]</a>
 
-We provide two ways to run our code.
+我们提供了两种方式运行我们的代码。
 
-### python
+### python运行
 
 ```
 python examples/musc_main.py
 ```
-Follow the configuration in `./configs/musc.yaml`.
+遵循`./configs/musc.yaml`中的设置。
 
-### script
+### shell运行
 
 ```
 sh scripts/musc.sh
 ```
-The configuration in the script `musc.sh` takes precedence.
+脚本`musc.sh`中的设置具有更高的优先级。
 
-The key arguments of the script are as follows:
+关键参数如下：
 
-- `--device`: GPU_id.
-- `--data_path`: The directory of datasets.
-- `--dataset_name`: Dataset name.
-- `--class_name`: Category to be tested. If the parameter is set to `ALL`, all the categories are tested.
-- `--backbone_name`: Feature exractor name. Our code is compatible with CLIP, DINO and DINO_v2. For more details, see `configs/musc.yaml`.
-- `--pretrained`: Pretrained CLIP model. `openai`, `laion400m_e31`, and `laion400m_e32` are optional.
-- `--feature_layers`: The layers for extracting features in backbone(ViT).
-- `--img_resize`: The size of the image inputted into the model.
-- `--divide_num`: The number of subsets the whole test set is divided into.
-- `--r_list`: The aggregation degrees of our LNAMD module.
-- `--output_dir`: The directory that saves the anomaly prediction maps and metrics. This directory will be automatically created.
-- `--vis`: Whether to save the anomaly prediction maps.
-- `--vis_type`: Choose between `single_norm` and `whole_norm`. This means whether to normalize a single anomaly map or all of them together when visualizing.
-- `--save_excel`: Whether to save anomaly classification and segmentation results (metrics).
+- `--device`: GPU_id。
+- `--data_path`: 数据集路径。
+- `--dataset_name`: 数据集名称。
+- `--class_name`: 进行测试的类别，如果该参数设置为`ALL`，将对所有的类别进行测试。
+- `--backbone_name`: 特征提取器的名称，我们的代码兼容CLIP，DINO和DINO_v2，详见`configs/musc.yaml`。
+- `--pretrained`: 选择预训练的CLIP模型，可选`openai`，`laion400m_e31`和`laion400m_e32`。
+- `--feature_layers`: backbone中用于提取特征的层。
+- `--img_resize`: 输入到模型中的图像大小。
+- `--divide_num`: 将完整的无标签测试集划分为子集的数量。
+- `--r_list`: LNAMD模块中的多个聚合度。
+- `--output_dir`: 保存该方法预测的异常概率图和检测分割指标的路径。
+- `--vis`: 是否保存该方法预测的异常概率图。
+- `--vis_type`: 可在`single_norm`和`whole_norm`中进行选择，`single_norm`意思是将每张异常概率图进行归一化后再可视化，`whole_norm`意思是将全部异常概率图统一进行归一化后再可视化。
+- `--save_excel`: 是否保存该方法异常检测和分割的指标。
 
 <span id='rscin'/>
 
-## 💎Classification optimization (RsCIN): <a href='#all_catelogue'>[Back to Top]</a>
+## 💎分类优化模块RsCIN: <a href='#all_catelogue'>[返回目录]</a>
 
-We provide additional code in `./models/RsCIN_features` folder to optimize the classification results of other methods using our RsCIN module. We use **ViT-large-14-336 of CLIP** to extract the image features of the MVTec AD and VisA datasets and store them in `mvtec_ad_cls.dat` and `visa_cls.dat` respectively. We show how to use them in `./models/RsCIN_features/RsCIN.py`.
+对于我们的RsCIN模块，我们在`./models/RsCIN_features`文件夹中提供了额外的代码方便实现迁移。
+我们使用*ViT-large-14-336 of CLIP*提取了MVTec AD和VisA数据集的图像级特征，并分别存储在`mvtec_ad_cls.dat`和`visa_cls.dat`中，
+在`./models/RsCIN_features/RsCIN.py`文件中我们展示了如何使用它们。
 
-### Example
-
-Before using our RsCIN module, move `RsCIN.py`, `mvtec_ad_cls.dat` and `visa_cls.dat` to your project directory.
+### 使用样例
+在使用我们的RsCIN模块之前，请将`RsCIN.py`、`mvtec_ad_cls.dat`和`visa_cls.dat`移动到自己的项目目录下。
 
 ```
 import numpy as np
 from RsCIN import Mobile_RsCIN
 
-classification_results = np.random.rand(83) # the classification results of your method.
-dataset_name = 'mvtec_ad' # dataset name
-class_name = 'bottle' # category name in the above dataset
+classification_results = np.random.rand(83) # 优化前的分类结果
+dataset_name = 'mvtec_ad' # 数据集名称
+class_name = 'bottle' # 数据集中的产品类别
 optimized_classification_results = Mobile_RsCIN(classification_results, dataset_name=dataset_name, class_name=class_name)
 ```
 
-The `optimized_classification_results` are the anomaly classification scores optimized by our RsCIN module.
+`optimized_classification_results`表示经过我们的RsCIN模块优化之后的分类结果。
 
 ### Apply to the custom dataset
 
-You can extract the image features of each image in the custom dataset, and store them in the variable `cls_tokens`.
-The multiple window sizes in the Multi-window Mask Operation can be adjusted by the value of `k_list`.
+如下，对于其它自定义的数据集，您可以提取每张图像的图像级特征，并存储在变量`cls_tokens`中，多窗口掩膜操作中的多个窗口大小可以通过改变变量`k_list`的值进行调整。
 
 ```
 import numpy as np
 from RsCIN import Mobile_RsCIN
 
-classification_results = np.random.rand(83) # the classification results of your method.
-cls_tokens = np.random.rand(83, 768)  # shape[N, C] the image features, N is the number of images
-k_list = [2, 3] # the multiple window sizes in the Multi-window Mask Operation
+classification_results = np.random.rand(83) # the 优化前的分类结果
+cls_tokens = np.random.rand(83, 768)  # shape[N, C] 图像级特征, N为图像的数量
+k_list = [2, 3] # 多窗口掩膜操作中的多个窗口大小
 optimized_classification_results = Mobile_RsCIN(classification_results, k_list=k_list, cls_tokens=cls_tokens)
 ```
 
 <span id='results_datasets'/>
 
-## 🎖️Results of different datasets: <a href='#all_catelogue'>[Back to Top]</a>
+## 🎖️不同数据集的结果: <a href='#all_catelogue'>[返回目录]</a>
 
-All the results are implemented by the default settings in our paper.
+以下所有的结果均按照论文中的默认设置复现。
 
 ### MVTec AD
 
@@ -321,8 +325,8 @@ All the results are implemented by the default settings in our paper.
 |    pcb2    |      93.20     |   88.66    | 94.46  |    97.39     |    34.38    |  21.86  |  86.06   |
 |    pcb3    |      93.52     |   86.92    | 93.48  |    98.05     |    40.23    |  41.03  |  92.32   |
 |    pcb4    |      98.43     |   92.89    | 98.47  |    98.70     |    46.38    |  44.72  |  92.66   |
-| pipe_fryum |      98.34     |   96.04    | 99.16  |    99.40     |    67.56    |  67.90  |  97.32   |
-|    mean    |      92.57     |   89.06    | 93.31  |    98.71     |    48.90    |  45.38  |  92.43   |
+| pipe_fryum |      98.34     |   96.04    | 99.16  |    99.40     |    48.90    |  67.90  |  97.32   |
+|    mean    |      92.57     |   89.06    | 93.31  |    98.71     |    67.56    |  45.38  |  92.43   |
 
 ### BTAD
 
@@ -336,11 +340,10 @@ All the results are implemented by the default settings in our paper.
 
 <span id='results_backbones'/>
 
-## 🎖️Results of different backbones: <a href='#all_catelogue'>[Back to Top]</a>
+## 🎖️使用不同特征提取器的结果: <a href='#all_catelogue'>[返回目录]</a>
 
-The default backbone (feature extractor) in our paper is ViT-large-14-336 of CLIP.
-We also provide the supported codes for other image encoder of CLIP, DINO and DINO_v2.
-For more details, see `configs/musc.yaml`.
+我们论文中使用的默认特征提取器是CLIP的ViT-large-14-336。
+我们还提供了CLIP、DINO和DINO_v2的vision transformer作为特征提取器的运行程序，具体信息详见`configs/musc.yaml`。
 
 ### MVTec AD
 
@@ -412,10 +415,10 @@ For more details, see `configs/musc.yaml`.
 
 <span id='inference_time'/>
 
-## ⌛Inference Time: <a href='#all_catelogue'>[Back to Top]</a>
+## ⌛推理时间: <a href='#all_catelogue'>[返回目录]</a>
 
-We show the inference time per image in the table below when using different backbones and image sizes.
-The default setting for number of images in mutual scoring module is **200**, and GPU is NVIDIA RTX 3090.
+在下表中，我们展示了使用不用backbone和image size时的推理速度。
+在计算推理速度时，我们设定一次性参与互打分的图像数量为**200**，所用GPU为单卡NVIDIA RTX 3090。
 
 |                 |            |            |                |
 |:---------------:|:----------:|:----------:| :------------: |
@@ -439,22 +442,22 @@ The default setting for number of images in mutual scoring module is **200**, an
 
 <span id='FAQ'/>
 
-## 🙋🙋‍♂️Frequently Asked Questions: <a href='#all_catelogue'>[Back to Top]</a>
+## 🙋🙋‍♂️常见问题: <a href='#all_catelogue'>[返回目录]</a>
 
-Q: Why do large areas of high anomaly scores appear on normal images in the visualization?
+Q: 可视化图中正常的图像上为什么会出现大面积较高的异常分数？
 
-A: In the visualization, in order to highlight abnormal areas, we adopt a single anomaly map normalization by default. Even if the overall response of the single map is low, a large number of highlighted areas will appear after normalization. Normalization of all the anomaly maps together can be achieved by adding the `vis_type` parameter to the shell script and setting it as `whole_norm`, or by modifying the `testing->vis_type` parameter in the `./configs/musc.yaml`.
+A: 在可视化时，为了突出异常区域，我们默认采用了单图归一化，即便单图响应整体较低，经过归一化后也会出现大量的高亮区域。可通过在shell脚本中添加`vis_type`参数，并设置为`whole_norm`来进行全部图像一同归一化，也可通过修改`./configs/musc.yaml`配置文件中的`testing->vis_type`参数来实现相同的效果。
 
-Q: How to set the appropriate input image resolution ?
+Q: 输入到模型中的图像分辨率如何选取？
 
-A: The image resolution `img_resize` input into the backbone is generally set to a multiple of the patch size of ViT.
-The commonly used values are 224, 240, 256, 336, 512 and 518.
-In the previous section <a href='#results_backbones'>*(jump)*</a>, we show the two input image resolutions commonly used by different feature extractors for reference.
-The image resolution can be changed by modifying the 'img_resize' parameter in the shell script, or by modifying the `datasets->img_resize` parameter in the `./configs/musc.yaml` configuration file.
+A: 输入到模型中的图像分辨率`img_resize`一般为ViT patch size的倍数，可以防止边缘部分产生误检，常用的值为224、240、256、336、512、518，我们在上一节<a href='#results_backbones'>*(跳转)*</a>中展示了不同特征提取器常用的两种输入图像分辨率的大小，可供参考。
+可通过修改shell脚本中的`img_resize`参数更改图像分辨率，也可通过修改`./configs/musc.yaml`配置文件中的`datasets->img_resize`参数来更改。
+
+
 
 <span id='citation'/>
 
-## Citation: <a href='#all_catelogue'>[Back to Top]</a>
+## 引用: <a href='#all_catelogue'>[返回目录]</a>
 ```
 @inproceedings{Li2024MuSc,
   title={MuSc: Zero-Shot Industrial Anomaly Classification and Segmentation with Mutual Scoring of the Unlabeled Images},
@@ -466,11 +469,11 @@ The image resolution can be changed by modifying the 'img_resize' parameter in t
 
 <span id='thanks'/>
 
-## Thanks: <a href='#all_catelogue'>[Back to Top]</a>
+## 致谢: <a href='#all_catelogue'>[返回目录]</a>
 
 Our repo is built on [PatchCore](https://github.com/amazon-science/patchcore-inspection) and [APRIL-GAN](https://github.com/ByChelsea/VAND-APRIL-GAN), thanks their clear and elegant code !
 
 <span id='license'/>
 
-## License: <a href='#all_catelogue'>[Back to Top]</a>
+## 使用许可: <a href='#all_catelogue'>[返回目录]</a>
 MuSc is released under the **MIT Licence**, and is fully open for academic research and also allow free commercial usage. To apply for a commercial license, please contact yuzhou@hust.edu.cn.
