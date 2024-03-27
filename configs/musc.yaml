@@ -7,15 +7,15 @@ datasets:
 models:
   backbone_name: 'ViT-L-14-336'
   pretrained: 'openai'
-  batch_size: 1
+  batch_size: 4
   feature_layers: [5, 11, 17, 23]
   r_list: [1, 3, 5]
 device: 0
 testing:
   output_dir: 'output'
-  vis: True
+  vis: False
   vis_type: single_norm # choice ['single_norm', 'whole_norm']
-  save_excel: True
+  save_excel: False
 
 
 # models['backbone_name'] choice:
@@ -23,8 +23,6 @@ testing:
 # ViT-L-14 | ViT-L-14-336
 # dino_vitbase8 | dino_vitbase16
 # dinov2_vitb14 | dinov2_vitl14
-# resnet18 | resnet34 | resnet50 | resnet101
-# wideresnet50 | wideresnet101
 
 # models['pretrained'] choice:
 # openai (apply to ViT-B-32, ViT-B-16, ViT-L-14 and ViT-L-14-336)
