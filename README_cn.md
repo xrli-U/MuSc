@@ -34,37 +34,37 @@
 
 ### MVTec AD
 
-|            |                  |                | Classification |            |        | Segmentation |             |         |          |
-|:----------:| :--------------: | :------------: | :------------: | :--------: | :----: | :----------: | :---------: | :-----: | :------: |
-|   Methods  |       Venue      |     Setting    |    AUROC-cls   | F1-max-cls | AP-cls |  AUROC-segm  | F1-max-segm | AP-segm | PRO-segm |
-|    MuSc(ours)    |    ICLR 2024     |     0-shot     |      97.8      |   97.5     | 99.1   |    97.3      |    62.6     |  62.7   |  93.8    |
-|   [RegAD](https://link.springer.com/chapter/10.1007/978-3-031-20053-3_18)    |    ECCV 2022     |     4-shot     |      89.1      |   92.4     | 94.9   |    96.2      |    51.7     |  48.3   |  88.0    |
-|  [GraphCore](https://openreview.net/forum?id=xzmqxHdZAwO) |    ICLR 2023     |     4-shot     |      92.9      |     -      |   -    |    97.4      |      -      |    -    |    -     |
-|   [WinCLIP](https://openaccess.thecvf.com/content/CVPR2023/papers/Jeong_WinCLIP_Zero-Few-Shot_Anomaly_Classification_and_Segmentation_CVPR_2023_paper.pdf)  |    CVPR 2023     |     0-shot     |      91.8      |   92.9     | 96.5   |    85.1      |    31.7     |    -    |  64.6    |
-|   [WinCLIP](https://openaccess.thecvf.com/content/CVPR2023/papers/Jeong_WinCLIP_Zero-Few-Shot_Anomaly_Classification_and_Segmentation_CVPR_2023_paper.pdf)  |    CVPR 2023     |     4-shot     |      95.2      |   94.7     | 97.3   |    96.2      |    51.7     |    -    |  88.0    |
-| [APRIL-GAN](https://arxiv.org/pdf/2305.17382.pdf)  |CVPR Workshop 2023|     0-shot     |      86.1      |   90.4     | 93.5   |    87.6      |    43.3     |  40.8   |  44.0    |
-| [APRIL-GAN](https://arxiv.org/pdf/2305.17382.pdf)  |CVPR Workshop 2023|     4-shot     |      92.8      |   92.8     | 96.3   |    95.9      |    56.9     |  54.5   |  91.8    |
-|    [FastRecon](https://openaccess.thecvf.com/content/ICCV2023/papers/Fang_FastRecon_Few-shot_Industrial_Anomaly_Detection_via_Fast_Feature_Reconstruction_ICCV_2023_paper.pdf)    |   ICCV 2023   |     4-shot     |      94.2      |     -      |   -    |    97.0     |      -      |    -    |    -     |
-|    [ACR](https://proceedings.neurips.cc/paper_files/paper/2023/file/8078e8c3055303a884ffae2d3ea00338-Paper-Conference.pdf)    |   NeurIPS 2023   |     0-shot     |      85.8      |   91.3     | 92.9   |    92.5      |    44.2     |  38.9   |  72.7    |
-|    [RegAD+Adversarial Loss](https://papers.bmvc2023.org/0202.pdf)    |   BMVC 2023   |     8-shot     |      91.9      |     -      |   -    |      96.9      |      -      |    -    |    -     |
-|    [PACKD](https://papers.bmvc2023.org/0259.pdf)    |   BMVC 2023   |     8-shot     |      95.3      |     -      |   -    |      97.3      |      -      |    -    |    -     |
-|  [PromptAD](https://openaccess.thecvf.com/content/WACV2024/papers/Li_PromptAD_Zero-Shot_Anomaly_Detection_Using_Text_Prompts_WACV_2024_paper.pdf)  |    WACV 2024     |     0-shot     |      90.8      |     -      |   -    |    92.1      |    36.2     |    -    |  72.8    |
-| [AnomalyCLIP](https://openreview.net/forum?id=buC4E91xZE)|    ICLR 2024     |     0-shot     |      91.5      |     -      | 96.2   |    91.1      |      -      |    -    |  81.4    |
-|   [InCTRL](https://arxiv.org/pdf/2403.06495.pdf)   |    CVPR 2024     |     8-shot     |      95.3      |     -      |   -    |      -       |      -      |    -    |    -     |
+|                                          |                    |         | Classification |            |        | Segmentation |             |         |          |
+| :--------------------------------------: | :----------------: | :-----: | :------------: | :--------: | :----: | :----------: | :---------: | :-----: | :------: |
+|                 Methods                  |       Venue        | Setting |   AUROC-cls    | F1-max-cls | AP-cls |  AUROC-segm  | F1-max-segm | AP-segm | PRO-segm |
+|                MuSc(ours)                |     ICLR 2024      | 0-shot  |      97.8      |    97.5    |  99.1  |     97.3     |    62.6     |  62.7   |   93.8   |
+| [RegAD](https://link.springer.com/chapter/10.1007/978-3-031-20053-3_18) |     ECCV 2022      | 4-shot  |      89.1      |    92.4    |  94.9  |     96.2     |    51.7     |  48.3   |   88.0   |
+| [GraphCore](https://openreview.net/forum?id=xzmqxHdZAwO) |     ICLR 2023      | 4-shot  |      92.9      |     -      |   -    |     97.4     |      -      |    -    |    -     |
+| [WinCLIP](https://openaccess.thecvf.com/content/CVPR2023/papers/Jeong_WinCLIP_Zero-Few-Shot_Anomaly_Classification_and_Segmentation_CVPR_2023_paper.pdf) |     CVPR 2023      | 0-shot  |      91.8      |    92.9    |  96.5  |     85.1     |    31.7     |    -    |   64.6   |
+| [WinCLIP](https://openaccess.thecvf.com/content/CVPR2023/papers/Jeong_WinCLIP_Zero-Few-Shot_Anomaly_Classification_and_Segmentation_CVPR_2023_paper.pdf) |     CVPR 2023      | 4-shot  |      95.2      |    94.7    |  97.3  |     96.2     |    51.7     |    -    |   88.0   |
+| [APRIL-GAN](https://arxiv.org/pdf/2305.17382.pdf) | CVPR Workshop 2023 | 0-shot  |      86.1      |    90.4    |  93.5  |     87.6     |    43.3     |  40.8   |   44.0   |
+| [APRIL-GAN](https://arxiv.org/pdf/2305.17382.pdf) | CVPR Workshop 2023 | 4-shot  |      92.8      |    92.8    |  96.3  |     95.9     |    56.9     |  54.5   |   91.8   |
+| [FastRecon](https://openaccess.thecvf.com/content/ICCV2023/papers/Fang_FastRecon_Few-shot_Industrial_Anomaly_Detection_via_Fast_Feature_Reconstruction_ICCV_2023_paper.pdf) |     ICCV 2023      | 4-shot  |      94.2      |     -      |   -    |     97.0     |      -      |    -    |    -     |
+| [ACR](https://proceedings.neurips.cc/paper_files/paper/2023/file/8078e8c3055303a884ffae2d3ea00338-Paper-Conference.pdf) |    NeurIPS 2023    | 0-shot  |      85.8      |    91.3    |  92.9  |     92.5     |    44.2     |  38.9   |   72.7   |
+| [RegAD+Adversarial Loss](https://papers.bmvc2023.org/0202.pdf) |     BMVC 2023      | 8-shot  |      91.9      |     -      |   -    |     96.9     |      -      |    -    |    -     |
+| [PACKD](https://papers.bmvc2023.org/0259.pdf) |     BMVC 2023      | 8-shot  |      95.3      |     -      |   -    |     97.3     |      -      |    -    |    -     |
+| [PromptAD](https://openaccess.thecvf.com/content/WACV2024/papers/Li_PromptAD_Zero-Shot_Anomaly_Detection_Using_Text_Prompts_WACV_2024_paper.pdf) |     WACV 2024      | 0-shot  |      90.8      |     -      |   -    |     92.1     |    36.2     |    -    |   72.8   |
+| [AnomalyCLIP](https://openreview.net/forum?id=buC4E91xZE) |     ICLR 2024      | 0-shot  |      91.5      |     -      |  96.2  |     91.1     |      -      |    -    |   81.4   |
+| [InCTRL](https://arxiv.org/pdf/2403.06495.pdf) |     CVPR 2024      | 8-shot  |      95.3      |     -      |   -    |      -       |      -      |    -    |    -     |
 
 ### VisA
 
-|            |                  |                | Classification |            |        | Segmentation |             |         |          |
-|:----------:| :--------------: | :------------: | :------------: | :--------: | :----: | :----------: | :---------: | :-----: | :------: |
-|   Methods  |       Venue      |     Setting    |    AUROC-cls   | F1-max-cls | AP-cls |  AUROC-segm  | F1-max-segm | AP-segm | PRO-segm |
-|    MuSc(ours)    |    ICLR 2024     |     0-shot     |      92.8      |   89.5     | 93.5   |    98.8      |    48.8     |  45.1   |  92.7    |
-|   [WinCLIP](https://openaccess.thecvf.com/content/CVPR2023/papers/Jeong_WinCLIP_Zero-Few-Shot_Anomaly_Classification_and_Segmentation_CVPR_2023_paper.pdf)  |    CVPR 2023     |     0-shot     |      78.1      |   79.0     | 81.2   |    79.6      |    14.8     |    -    |  56.8    |
-|   [WinCLIP](https://openaccess.thecvf.com/content/CVPR2023/papers/Jeong_WinCLIP_Zero-Few-Shot_Anomaly_Classification_and_Segmentation_CVPR_2023_paper.pdf)  |    CVPR 2023     |     4-shot     |      87.3      |   84.2     | 88.8   |    97.2      |    47.0     |    -    |  87.6    |
-| [APRIL-GAN](https://arxiv.org/pdf/2305.17382.pdf)  |CVPR Workshop 2023|     0-shot     |      78.0      |   78.7     | 81.4   |    94.2      |    32.3     |  25.7   |  86.8    |
-| [APRIL-GAN](https://arxiv.org/pdf/2305.17382.pdf)  |CVPR Workshop 2023|     4-shot     |      92.6      |   88.4     | 94.5   |    96.2      |    40.0     |  32.2   |  90.2    |
-|    [PACKD](https://papers.bmvc2023.org/0259.pdf)    |   BMVC 2023   |     8-shot     |      87.5      |     -      |   -    |      97.9      |      -      |    -    |    -     |
-| [AnomalyCLIP](https://openreview.net/forum?id=buC4E91xZE)|    ICLR 2024     |     0-shot     |      82.1      |     -      | 85.4   |    95.5      |      -      |    -    |  87.0    |
-|   [InCTRL](https://arxiv.org/pdf/2403.06495.pdf)   |    CVPR 2024     |     8-shot     |      88.7      |     -      |   -    |      -       |      -      |    -    |    -     |
+|                                          |                    |         | Classification |            |        | Segmentation |             |         |          |
+| :--------------------------------------: | :----------------: | :-----: | :------------: | :--------: | :----: | :----------: | :---------: | :-----: | :------: |
+|                 Methods                  |       Venue        | Setting |   AUROC-cls    | F1-max-cls | AP-cls |  AUROC-segm  | F1-max-segm | AP-segm | PRO-segm |
+|                MuSc(ours)                |     ICLR 2024      | 0-shot  |      92.8      |    89.5    |  93.5  |     98.8     |    48.8     |  45.1   |   92.7   |
+| [WinCLIP](https://openaccess.thecvf.com/content/CVPR2023/papers/Jeong_WinCLIP_Zero-Few-Shot_Anomaly_Classification_and_Segmentation_CVPR_2023_paper.pdf) |     CVPR 2023      | 0-shot  |      78.1      |    79.0    |  81.2  |     79.6     |    14.8     |    -    |   56.8   |
+| [WinCLIP](https://openaccess.thecvf.com/content/CVPR2023/papers/Jeong_WinCLIP_Zero-Few-Shot_Anomaly_Classification_and_Segmentation_CVPR_2023_paper.pdf) |     CVPR 2023      | 4-shot  |      87.3      |    84.2    |  88.8  |     97.2     |    47.0     |    -    |   87.6   |
+| [APRIL-GAN](https://arxiv.org/pdf/2305.17382.pdf) | CVPR Workshop 2023 | 0-shot  |      78.0      |    78.7    |  81.4  |     94.2     |    32.3     |  25.7   |   86.8   |
+| [APRIL-GAN](https://arxiv.org/pdf/2305.17382.pdf) | CVPR Workshop 2023 | 4-shot  |      92.6      |    88.4    |  94.5  |     96.2     |    40.0     |  32.2   |   90.2   |
+| [PACKD](https://papers.bmvc2023.org/0259.pdf) |     BMVC 2023      | 8-shot  |      87.5      |     -      |   -    |     97.9     |      -      |    -    |    -     |
+| [AnomalyCLIP](https://openreview.net/forum?id=buC4E91xZE) |     ICLR 2024      | 0-shot  |      82.1      |     -      |  85.4  |     95.5     |      -      |    -    |   87.0   |
+| [InCTRL](https://arxiv.org/pdf/2403.06495.pdf) |     CVPR 2024      | 8-shot  |      88.7      |     -      |   -    |      -       |      -      |    -    |    -     |
 
 <span id='all_catelogue'/>
 
@@ -290,53 +290,53 @@ optimized_classification_results = Mobile_RsCIN(classification_results, k_list=k
 ### MVTec AD
 
 |            | Classification |            |        | Segmentation |             |         |          |
-|:----------:| :------------: | :--------: | :----: | :----------: | :---------: | :-----: | :------: |
-|  Category  |    AUROC-cls   | F1-max-cls | AP-cls |  AUROC-segm  | F1-max-segm | AP-segm | PRO-segm |
-|   bottle   |      99.92     |   99.21    | 99.98  |    98.48     |    79.17    |  83.04  |  96.10   |
-|   cable    |      98.99     |   97.30    | 99.42  |    95.76     |    60.97    |  57.70  |  89.62   |
-|  capsule   |      96.45     |   94.88    | 99.30  |    98.96     |    49.80    |  48.45  |  95.49   |
-|   carpet   |      99.88     |   99.44    | 99.96  |    99.45     |    73.33    |  76.05  |  97.58   |
-|    grid    |      98.66     |   96.49    | 99.54  |    98.16     |    43.94    |  38.24  |  93.92   |
-|  hazelnut  |      99.61     |   98.55    | 99.79  |    99.38     |    73.41    |  73.28  |  92.24   |
-|  leather   |      100.0     |   100.0    | 100.0  |    99.72     |    62.84    |  64.47  |  98.74   |
-| metal_nut  |      96.92     |   97.38    | 99.25  |    86.12     |    46.22    |  47.54  |  89.34   |
-|    pill    |      96.24     |   95.89    | 99.31  |    97.47     |    65.54    |  67.25  |  98.01   |
-|   screw    |      82.17     |   88.89    | 90.88  |    98.77     |    41.87    |  36.12  |  94.40   |
-|    tile    |      100.0     |   100.0    | 100.0  |    97.90     |    74.71    |  78.90  |  94.64   |
-| toothbrush |      100.0     |   100.0    | 100.0  |    99.53     |    70.19    |  67.79  |  95.48   |
-| transistor |      99.42     |   95.00    | 99.19  |    91.38     |    59.24    |  58.40  |  77.21   |
-|    wood    |      98.51     |   98.33    | 99.52  |    97.24     |    68.64    |  74.75  |  94.50   |
-|   zipper   |      99.84     |   99.17    | 99.96  |    98.40     |    62.48    |  61.89  |  94.46   |
-|    mean    |      97.77     |   97.37    | 99.07  |    97.11     |    62.16    |  62.26  |  93.45   |
+| :--------: | :------------: | :--------: | :----: | :----------: | :---------: | :-----: | :------: |
+|  Category  |   AUROC-cls    | F1-max-cls | AP-cls |  AUROC-segm  | F1-max-segm | AP-segm | PRO-segm |
+|   bottle   |     99.92      |   99.21    | 99.98  |    98.48     |    79.17    |  83.04  |  96.10   |
+|   cable    |     98.99      |   97.30    | 99.42  |    95.76     |    60.97    |  57.70  |  89.62   |
+|  capsule   |     96.45      |   94.88    | 99.30  |    98.96     |    49.80    |  48.45  |  95.49   |
+|   carpet   |     99.88      |   99.44    | 99.96  |    99.45     |    73.33    |  76.05  |  97.58   |
+|    grid    |     98.66      |   96.49    | 99.54  |    98.16     |    43.94    |  38.24  |  93.92   |
+|  hazelnut  |     99.61      |   98.55    | 99.79  |    99.38     |    73.41    |  73.28  |  92.24   |
+|  leather   |     100.0      |   100.0    | 100.0  |    99.72     |    62.84    |  64.47  |  98.74   |
+| metal_nut  |     96.92      |   97.38    | 99.25  |    86.12     |    46.22    |  47.54  |  89.34   |
+|    pill    |     96.24      |   95.89    | 99.31  |    97.47     |    65.54    |  67.25  |  98.01   |
+|   screw    |     82.17      |   88.89    | 90.88  |    98.77     |    41.87    |  36.12  |  94.40   |
+|    tile    |     100.0      |   100.0    | 100.0  |    97.90     |    74.71    |  78.90  |  94.64   |
+| toothbrush |     100.0      |   100.0    | 100.0  |    99.53     |    70.19    |  67.79  |  95.48   |
+| transistor |     99.42      |   95.00    | 99.19  |    91.38     |    59.24    |  58.40  |  77.21   |
+|    wood    |     98.51      |   98.33    | 99.52  |    97.24     |    68.64    |  74.75  |  94.50   |
+|   zipper   |     99.84      |   99.17    | 99.96  |    98.40     |    62.48    |  61.89  |  94.46   |
+|    mean    |     97.77      |   97.37    | 99.07  |    97.11     |    62.16    |  62.26  |  93.45   |
 
 ### VisA
 
 |            | Classification |            |        | Segmentation |             |         |          |
-|:----------:| :------------: | :--------: | :----: | :----------: | :---------: | :-----: | :------: |
-|  Category  |    AUROC-cls   | F1-max-cls | AP-cls |  AUROC-segm  | F1-max-segm | AP-segm | PRO-segm |
-|   candle   |      96.55     |   91.26    | 96.45  |    99.36     |    39.56    |  28.36  |  97.62   |
-|  capsules  |      88.62     |   86.43    | 93.77  |    98.71     |    50.85    |  43.90  |  88.20   |
-|   cashew   |      98.54     |   95.57    | 99.30  |    99.33     |    74.88    |  77.63  |  94.30   |
-| chewinggum |      98.42     |   96.45    | 99.30  |    99.54     |    61.33    |  61.21  |  88.39   |
-|   fryum    |      98.64     |   97.44    | 99.43  |    99.43     |    58.13    |  50.43  |  94.38   |
-|  macaroni1 |      89.33     |   82.76    | 88.64  |    99.51     |    21.90    |  15.25  |  96.37   |
-|  macaroni2 |      68.03     |   69.96    | 67.37  |    97.14     |    11.06    |   3.91  |  88.84   |
-|    pcb1    |      89.28     |   84.36    | 89.89  |    99.50     |    80.49    |  88.36  |  92.76   |
-|    pcb2    |      93.20     |   88.66    | 94.46  |    97.39     |    34.38    |  21.86  |  86.06   |
-|    pcb3    |      93.52     |   86.92    | 93.48  |    98.05     |    40.23    |  41.03  |  92.32   |
-|    pcb4    |      98.43     |   92.89    | 98.47  |    98.70     |    46.38    |  44.72  |  92.66   |
-| pipe_fryum |      98.34     |   96.04    | 99.16  |    99.40     |    48.90    |  67.90  |  97.32   |
-|    mean    |      92.57     |   89.06    | 93.31  |    98.71     |    67.56    |  45.38  |  92.43   |
+| :--------: | :------------: | :--------: | :----: | :----------: | :---------: | :-----: | :------: |
+|  Category  |   AUROC-cls    | F1-max-cls | AP-cls |  AUROC-segm  | F1-max-segm | AP-segm | PRO-segm |
+|   candle   |     96.55      |   91.26    | 96.45  |    99.36     |    39.56    |  28.36  |  97.62   |
+|  capsules  |     88.62      |   86.43    | 93.77  |    98.71     |    50.85    |  43.90  |  88.20   |
+|   cashew   |     98.54      |   95.57    | 99.30  |    99.33     |    74.88    |  77.63  |  94.30   |
+| chewinggum |     98.42      |   96.45    | 99.30  |    99.54     |    61.33    |  61.21  |  88.39   |
+|   fryum    |     98.64      |   97.44    | 99.43  |    99.43     |    58.13    |  50.43  |  94.38   |
+| macaroni1  |     89.33      |   82.76    | 88.64  |    99.51     |    21.90    |  15.25  |  96.37   |
+| macaroni2  |     68.03      |   69.96    | 67.37  |    97.14     |    11.06    |  3.91   |  88.84   |
+|    pcb1    |     89.28      |   84.36    | 89.89  |    99.50     |    80.49    |  88.36  |  92.76   |
+|    pcb2    |     93.20      |   88.66    | 94.46  |    97.39     |    34.38    |  21.86  |  86.06   |
+|    pcb3    |     93.52      |   86.92    | 93.48  |    98.05     |    40.23    |  41.03  |  92.32   |
+|    pcb4    |     98.43      |   92.89    | 98.47  |    98.70     |    46.38    |  44.72  |  92.66   |
+| pipe_fryum |     98.34      |   96.04    | 99.16  |    99.40     |    48.90    |  67.90  |  97.32   |
+|    mean    |     92.57      |   89.06    | 93.31  |    98.71     |    67.56    |  45.38  |  92.43   |
 
 ### BTAD
 
-|            | Classification |            |        | Segmentation |             |         |          |
-|:----------:| :------------: | :--------: | :----: | :----------: | :---------: | :-----: | :------: |
-|  Category  |    AUROC-cls   | F1-max-cls | AP-cls |  AUROC-segm  | F1-max-segm | AP-segm | PRO-segm |
-|     01     |      98.74     |   97.96    | 99.53  |    97.49     |    59.73    |  58.76  |  85.05   |
-|     02     |      90.23     |   95.38    | 98.41  |    95.36     |    58.20    |  55.16  |  68.64   |
-|     03     |      99.52     |   88.37    | 95.62  |    99.20     |    55.64    |  57.53  |  96.62   |
-|    mean    |      96.16     |   93.90    | 97.85  |    97.35     |    57.86    |  57.15  |  83.43   |
+|          | Classification |            |        | Segmentation |             |         |          |
+| :------: | :------------: | :--------: | :----: | :----------: | :---------: | :-----: | :------: |
+| Category |   AUROC-cls    | F1-max-cls | AP-cls |  AUROC-segm  | F1-max-segm | AP-segm | PRO-segm |
+|    01    |     98.74      |   97.96    | 99.53  |    97.49     |    59.73    |  58.76  |  85.05   |
+|    02    |     90.23      |   95.38    | 98.41  |    95.36     |    58.20    |  55.16  |  68.64   |
+|    03    |     99.52      |   88.37    | 95.62  |    99.20     |    55.64    |  57.53  |  96.62   |
+|   mean   |     96.16      |   93.90    | 97.85  |    97.35     |    57.86    |  57.15  |  83.43   |
 
 <span id='results_backbones'/>
 
@@ -347,71 +347,71 @@ optimized_classification_results = Mobile_RsCIN(classification_results, k_list=k
 
 ### MVTec AD
 
-|                 |            |            | Classification |            |        | Segmentation |             |         |          |
-|:---------------:|:----------:|:----------:| :------------: | :--------: | :----: | :----------: | :---------: | :-----: | :------: |
-|    Backbones    |Pre-training| image size |    AUROC-cls   | F1-max-cls | AP-cls |  AUROC-segm  | F1-max-segm | AP-segm | PRO-segm |
-|    ViT-B-32     |    CLIP    |    256     |      87.99     |   92.31    | 94.38  |    93.08     |    42.06    |  37.21  |  72.62   |
-|    ViT-B-32     |    CLIP    |    512     |      89.91     |   92.72    | 95.12  |    95.73     |    53.32    |  52.33  |  83.72   |
-|    ViT-B-16     |    CLIP    |    256     |      92.78     |   93.98    | 96.59  |    96.21     |    52.48    |  50.23  |  87.00   |
-|    ViT-B-16     |    CLIP    |    512     |      94.20     |   95.20    | 97.34  |    97.09     |    61.24    |  61.45  |  91.67   |
-|ViT-B-16-plus-240|    CLIP    |    240     |      94.77     |   95.43    | 97.60  |    96.26     |    52.23    |  50.27  |  87.70   |
-|ViT-B-16-plus-240|    CLIP    |    512     |      95.69     |   96.50    | 98.11  |    97.28     |    60.71    |  61.29  |  92.14   |
-|    ViT-L-14     |    CLIP    |    336     |      96.06     |   96.65    | 98.25  |    97.24     |    59.41    |  58.10  |  91.69   |
-|    ViT-L-14     |    CLIP    |    518     |      95.94     |   96.32    | 98.30  |    97.42     |    63.06    |  63.67  |  92.92   |
-|  ViT-L-14-336   |    CLIP    |    336     |      96.40     |   96.44    | 98.30  |    97.03     |    57.51    |  55.44  |  92.18   |
-|  ViT-L-14-336   |    CLIP    |    518     |      97.77     |   97.37    | 99.07  |    97.11     |    62.16    |  62.26  |  93.45   |
-|  dino_vitbase16 |    DINO    |    256     |      89.39     |   93.77    | 95.37  |    95.83     |    54.02    |  52.84  |  84.24   |
-|  dino_vitbase16 |    DINO    |    512     |      94.11     |   96.13    | 97.26  |    97.78     |    62.07    |  63.20  |  92.49   |
-|  dinov2_vitb14  |   DINO_v2  |    336     |      95.67     |   96.80    | 97.95  |    97.74     |    60.23    |  59.45  |  93.84   |
-|  dinov2_vitb14  |   DINO_v2  |    518     |      96.31     |   96.87    | 98.32  |    98.07     |    64.65    |  65.31  |  95.59   |
-|  dinov2_vitl14  |   DINO_v2  |    336     |      96.84     |   97.45    | 98.68  |    98.17     |    61.77    |  61.21  |  94.62   |
-|  dinov2_vitl14  |   DINO_v2  |    518     |      97.08     |   97.13    | 98.82  |    98.34     |    66.15    |  67.39  |  96.16   |
+|                   |              |            | Classification |            |        | Segmentation |             |         |          |
+| :---------------: | :----------: | :--------: | :------------: | :--------: | :----: | :----------: | :---------: | :-----: | :------: |
+|     Backbones     | Pre-training | image size |   AUROC-cls    | F1-max-cls | AP-cls |  AUROC-segm  | F1-max-segm | AP-segm | PRO-segm |
+|     ViT-B-32      |     CLIP     |    256     |     87.99      |   92.31    | 94.38  |    93.08     |    42.06    |  37.21  |  72.62   |
+|     ViT-B-32      |     CLIP     |    512     |     89.91      |   92.72    | 95.12  |    95.73     |    53.32    |  52.33  |  83.72   |
+|     ViT-B-16      |     CLIP     |    256     |     92.78      |   93.98    | 96.59  |    96.21     |    52.48    |  50.23  |  87.00   |
+|     ViT-B-16      |     CLIP     |    512     |     94.20      |   95.20    | 97.34  |    97.09     |    61.24    |  61.45  |  91.67   |
+| ViT-B-16-plus-240 |     CLIP     |    240     |     94.77      |   95.43    | 97.60  |    96.26     |    52.23    |  50.27  |  87.70   |
+| ViT-B-16-plus-240 |     CLIP     |    512     |     95.69      |   96.50    | 98.11  |    97.28     |    60.71    |  61.29  |  92.14   |
+|     ViT-L-14      |     CLIP     |    336     |     96.06      |   96.65    | 98.25  |    97.24     |    59.41    |  58.10  |  91.69   |
+|     ViT-L-14      |     CLIP     |    518     |     95.94      |   96.32    | 98.30  |    97.42     |    63.06    |  63.67  |  92.92   |
+|   ViT-L-14-336    |     CLIP     |    336     |     96.40      |   96.44    | 98.30  |    97.03     |    57.51    |  55.44  |  92.18   |
+|   ViT-L-14-336    |     CLIP     |    518     |     97.77      |   97.37    | 99.07  |    97.11     |    62.16    |  62.26  |  93.45   |
+|  dino_vitbase16   |     DINO     |    256     |     89.39      |   93.77    | 95.37  |    95.83     |    54.02    |  52.84  |  84.24   |
+|  dino_vitbase16   |     DINO     |    512     |     94.11      |   96.13    | 97.26  |    97.78     |    62.07    |  63.20  |  92.49   |
+|   dinov2_vitb14   |   DINO_v2    |    336     |     95.67      |   96.80    | 97.95  |    97.74     |    60.23    |  59.45  |  93.84   |
+|   dinov2_vitb14   |   DINO_v2    |    518     |     96.31      |   96.87    | 98.32  |    98.07     |    64.65    |  65.31  |  95.59   |
+|   dinov2_vitl14   |   DINO_v2    |    336     |     96.84      |   97.45    | 98.68  |    98.17     |    61.77    |  61.21  |  94.62   |
+|   dinov2_vitl14   |   DINO_v2    |    518     |     97.08      |   97.13    | 98.82  |    98.34     |    66.15    |  67.39  |  96.16   |
 
 
 ### VisA
 
-|                 |            |            | Classification |            |        | Segmentation |             |         |          |
-|:---------------:|:----------:|:----------:| :------------: | :--------: | :----: | :----------: | :---------: | :-----: | :------: |
-|    Backbones    |Pre-training| image size |    AUROC-cls   | F1-max-cls | AP-cls |  AUROC-segm  | F1-max-segm | AP-segm | PRO-segm |
-|    ViT-B-32     |    CLIP    |    256     |      72.95     |   76.90    | 77.68  |    89.30     |    25.93    |  20.68  |  50.95   |
-|    ViT-B-32     |    CLIP    |    512     |      77.82     |   80.20    | 81.01  |    96.06     |    34.72    |  30.20  |  73.08   |
-|    ViT-B-16     |    CLIP    |    256     |      81.44     |   80.86    | 83.84  |    95.97     |    36.72    |  31.81  |  73.48   |
-|    ViT-B-16     |    CLIP    |    512     |      86.48     |   84.12    | 88.05  |    97.98     |    42.21    |  37.29  |  85.10   |
-|ViT-B-16-plus-240|    CLIP    |    240     |      82.62     |   81.61    | 85.05  |    96.11     |    37.84    |  33.43  |  72.37   |
-|ViT-B-16-plus-240|    CLIP    |    512     |      86.72     |   84.22    | 89.41  |    97.95     |    43.27    |  37.68  |  83.52   |
-|    ViT-L-14     |    CLIP    |    336     |      88.38     |   85.23    | 89.77  |    98.32     |    44.67    |  40.42  |  87.80   |
-|    ViT-L-14     |    CLIP    |    518     |      90.86     |   87.75    | 91.66  |    98.45     |    45.74    |  42.09  |  89.93   |
-|  ViT-L-14-336   |    CLIP    |    336     |      88.61     |   85.31    | 90.00  |    98.53     |    45.10    |  40.92  |  89.35   |
-|  ViT-L-14-336   |    CLIP    |    518     |      92.57     |   89.06    | 93.31  |    98.71     |    48.90    |  45.38  |  92.43   |
-|  dino_vitbase16 |    DINO    |    256     |      78.21     |   80.12    | 81.11  |    95.74     |    36.81    |  32.84  |  70.21   |
-|  dino_vitbase16 |    DINO    |    512     |      84.11     |   83.52    | 85.91  |    97.74     |    42.86    |  38.27  |  83.00   |
-|  dinov2_vitb14  |   DINO_v2  |    336     |      87.65     |   86.24    | 88.51  |    97.80     |    41.68    |  37.06  |  85.01   |
-|  dinov2_vitb14  |   DINO_v2  |    518     |      90.25     |   87.48    | 90.86  |    98.66     |    45.56    |  41.23  |  91.80   |
-|  dinov2_vitl14  |   DINO_v2  |    336     |      90.18     |   88.47    | 90.56  |    98.38     |    43.84    |  38.74  |  88.38   |
-|  dinov2_vitl14  |   DINO_v2  |    518     |      91.73     |   89.20    | 92.27  |    98.78     |    47.12    |  42.79  |  92.40   |
+|                   |              |            | Classification |            |        | Segmentation |             |         |          |
+| :---------------: | :----------: | :--------: | :------------: | :--------: | :----: | :----------: | :---------: | :-----: | :------: |
+|     Backbones     | Pre-training | image size |   AUROC-cls    | F1-max-cls | AP-cls |  AUROC-segm  | F1-max-segm | AP-segm | PRO-segm |
+|     ViT-B-32      |     CLIP     |    256     |     72.95      |   76.90    | 77.68  |    89.30     |    25.93    |  20.68  |  50.95   |
+|     ViT-B-32      |     CLIP     |    512     |     77.82      |   80.20    | 81.01  |    96.06     |    34.72    |  30.20  |  73.08   |
+|     ViT-B-16      |     CLIP     |    256     |     81.44      |   80.86    | 83.84  |    95.97     |    36.72    |  31.81  |  73.48   |
+|     ViT-B-16      |     CLIP     |    512     |     86.48      |   84.12    | 88.05  |    97.98     |    42.21    |  37.29  |  85.10   |
+| ViT-B-16-plus-240 |     CLIP     |    240     |     82.62      |   81.61    | 85.05  |    96.11     |    37.84    |  33.43  |  72.37   |
+| ViT-B-16-plus-240 |     CLIP     |    512     |     86.72      |   84.22    | 89.41  |    97.95     |    43.27    |  37.68  |  83.52   |
+|     ViT-L-14      |     CLIP     |    336     |     88.38      |   85.23    | 89.77  |    98.32     |    44.67    |  40.42  |  87.80   |
+|     ViT-L-14      |     CLIP     |    518     |     90.86      |   87.75    | 91.66  |    98.45     |    45.74    |  42.09  |  89.93   |
+|   ViT-L-14-336    |     CLIP     |    336     |     88.61      |   85.31    | 90.00  |    98.53     |    45.10    |  40.92  |  89.35   |
+|   ViT-L-14-336    |     CLIP     |    518     |     92.57      |   89.06    | 93.31  |    98.71     |    48.90    |  45.38  |  92.43   |
+|  dino_vitbase16   |     DINO     |    256     |     78.21      |   80.12    | 81.11  |    95.74     |    36.81    |  32.84  |  70.21   |
+|  dino_vitbase16   |     DINO     |    512     |     84.11      |   83.52    | 85.91  |    97.74     |    42.86    |  38.27  |  83.00   |
+|   dinov2_vitb14   |   DINO_v2    |    336     |     87.65      |   86.24    | 88.51  |    97.80     |    41.68    |  37.06  |  85.01   |
+|   dinov2_vitb14   |   DINO_v2    |    518     |     90.25      |   87.48    | 90.86  |    98.66     |    45.56    |  41.23  |  91.80   |
+|   dinov2_vitl14   |   DINO_v2    |    336     |     90.18      |   88.47    | 90.56  |    98.38     |    43.84    |  38.74  |  88.38   |
+|   dinov2_vitl14   |   DINO_v2    |    518     |     91.73      |   89.20    | 92.27  |    98.78     |    47.12    |  42.79  |  92.40   |
 
 
 ### BTAD
 
-|                 |            |            | Classification |            |        | Segmentation |             |         |          |
-|:---------------:|:----------:|:----------:| :------------: | :--------: | :----: | :----------: | :---------: | :-----: | :------: |
-|    Backbones    |Pre-training| image size |    AUROC-cls   | F1-max-cls | AP-cls |  AUROC-segm  | F1-max-segm | AP-segm | PRO-segm |
-|    ViT-B-32     |    CLIP    |    256     |      92.19     |   95.55    | 98.47  |    96.74     |    43.98    |  35.70  |  68.56   |
-|    ViT-B-32     |    CLIP    |    512     |      93.31     |   94.61    | 98.40  |    97.41     |    52.94    |  48.80  |  69.59   |
-|    ViT-B-16     |    CLIP    |    256     |      92.44     |   91.00    | 97.31  |    97.45     |    55.27    |  52.19  |  72.68   |
-|    ViT-B-16     |    CLIP    |    512     |      94.11     |   92.99    | 97.98  |    97.91     |    59.18    |  59.05  |  77.86   |
-|ViT-B-16-plus-240|    CLIP    |    240     |      92.86     |   93.99    | 97.96  |    97.68     |    54.81    |  51.33  |  73.47   |
-|ViT-B-16-plus-240|    CLIP    |    512     |      94.13     |   93.84    | 98.34  |    98.14     |    58.66    |  57.53  |  77.23   |
-|    ViT-L-14     |    CLIP    |    336     |      92.74     |   93.21    | 97.71  |    97.84     |    56.60    |  55.94  |  77.01   |
-|    ViT-L-14     |    CLIP    |    518     |      94.82     |   95.29    | 98.58  |    97.77     |    55.55    |  55.46  |  80.62   |
-|  ViT-L-14-336   |    CLIP    |    336     |      95.11     |   94.48    | 98.53  |    97.42     |    56.75    |  55.23  |  79.63   |
-|  ViT-L-14-336   |    CLIP    |    518     |      96.16     |   93.90    | 97.85  |    97.35     |    57.86    |  57.15  |  83.43   |
-|  dino_vitbase16 |    DINO    |    256     |      93.63     |   95.66    | 98.66  |    97.55     |    52.16    |  49.25  |  72.86   |
-|  dino_vitbase16 |    DINO    |    512     |      92.38     |   92.66    | 97.81  |    97.44     |    53.32    |  53.02  |  74.91   |
-|  dinov2_vitb14  |   DINO_v2  |    336     |      93.60     |   91.65    | 97.19  |    98.08     |    63.28    |  65.32  |  74.35   |
-|  dinov2_vitb14  |   DINO_v2  |    518     |      94.99     |   95.11    | 98.55  |    98.30     |    65.75    |  68.89  |  80.41   |
-|  dinov2_vitl14  |   DINO_v2  |    336     |      94.15     |   92.64    | 97.61  |    98.19     |    63.86    |  66.03  |  76.33   |
-|  dinov2_vitl14  |   DINO_v2  |    518     |      95.62     |   95.40    | 98.76  |    98.40     |    65.88    |  69.90  |  82.47   |
+|                   |              |            | Classification |            |        | Segmentation |             |         |          |
+| :---------------: | :----------: | :--------: | :------------: | :--------: | :----: | :----------: | :---------: | :-----: | :------: |
+|     Backbones     | Pre-training | image size |   AUROC-cls    | F1-max-cls | AP-cls |  AUROC-segm  | F1-max-segm | AP-segm | PRO-segm |
+|     ViT-B-32      |     CLIP     |    256     |     92.19      |   95.55    | 98.47  |    96.74     |    43.98    |  35.70  |  68.56   |
+|     ViT-B-32      |     CLIP     |    512     |     93.31      |   94.61    | 98.40  |    97.41     |    52.94    |  48.80  |  69.59   |
+|     ViT-B-16      |     CLIP     |    256     |     92.44      |   91.00    | 97.31  |    97.45     |    55.27    |  52.19  |  72.68   |
+|     ViT-B-16      |     CLIP     |    512     |     94.11      |   92.99    | 97.98  |    97.91     |    59.18    |  59.05  |  77.86   |
+| ViT-B-16-plus-240 |     CLIP     |    240     |     92.86      |   93.99    | 97.96  |    97.68     |    54.81    |  51.33  |  73.47   |
+| ViT-B-16-plus-240 |     CLIP     |    512     |     94.13      |   93.84    | 98.34  |    98.14     |    58.66    |  57.53  |  77.23   |
+|     ViT-L-14      |     CLIP     |    336     |     92.74      |   93.21    | 97.71  |    97.84     |    56.60    |  55.94  |  77.01   |
+|     ViT-L-14      |     CLIP     |    518     |     94.82      |   95.29    | 98.58  |    97.77     |    55.55    |  55.46  |  80.62   |
+|   ViT-L-14-336    |     CLIP     |    336     |     95.11      |   94.48    | 98.53  |    97.42     |    56.75    |  55.23  |  79.63   |
+|   ViT-L-14-336    |     CLIP     |    518     |     96.16      |   93.90    | 97.85  |    97.35     |    57.86    |  57.15  |  83.43   |
+|  dino_vitbase16   |     DINO     |    256     |     93.63      |   95.66    | 98.66  |    97.55     |    52.16    |  49.25  |  72.86   |
+|  dino_vitbase16   |     DINO     |    512     |     92.38      |   92.66    | 97.81  |    97.44     |    53.32    |  53.02  |  74.91   |
+|   dinov2_vitb14   |   DINO_v2    |    336     |     93.60      |   91.65    | 97.19  |    98.08     |    63.28    |  65.32  |  74.35   |
+|   dinov2_vitb14   |   DINO_v2    |    518     |     94.99      |   95.11    | 98.55  |    98.30     |    65.75    |  68.89  |  80.41   |
+|   dinov2_vitl14   |   DINO_v2    |    336     |     94.15      |   92.64    | 97.61  |    98.19     |    63.86    |  66.03  |  76.33   |
+|   dinov2_vitl14   |   DINO_v2    |    518     |     95.62      |   95.40    | 98.76  |    98.40     |    65.88    |  69.90  |  82.47   |
 
 <span id='inference_time'/>
 
@@ -420,25 +420,25 @@ optimized_classification_results = Mobile_RsCIN(classification_results, k_list=k
 在下表中，我们展示了使用不用backbone和image size时的推理速度。
 在计算推理速度时，我们设定一次性参与互打分的图像数量为**200**，所用GPU为单卡NVIDIA RTX 3090。
 
-|                 |            |            |                |
-|:---------------:|:----------:|:----------:| :------------: |
-|    Backbones    |Pre-training| image size | times(ms/image)|
-|    ViT-B-32     |    CLIP    |    256     |      95.74     |
-|    ViT-B-32     |    CLIP    |    512     |      48.33     |
-|    ViT-B-16     |    CLIP    |    256     |      86.68     |
-|    ViT-B-16     |    CLIP    |    512     |      450.5     |
-|ViT-B-16-plus-240|    CLIP    |    240     |      85.25     |
-|ViT-B-16-plus-240|    CLIP    |    512     |      506.4     |
-|    ViT-L-14     |    CLIP    |    336     |      266.0     |
-|    ViT-L-14     |    CLIP    |    518     |      933.3     |
-|  ViT-L-14-336   |    CLIP    |    336     |      270.2     |
-|  ViT-L-14-336   |    CLIP    |    518     |      955.3     |
-|  dino_vitbase16 |    DINO    |    256     |      85.97     |
-|  dino_vitbase16 |    DINO    |    512     |      458.5     |
-|  dinov2_vitb14  |   DINO_v2  |    336     |      209.1     |
-|  dinov2_vitb14  |   DINO_v2  |    518     |      755.0     |
-|  dinov2_vitl14  |   DINO_v2  |    336     |      281.4     |
-|  dinov2_vitl14  |   DINO_v2  |    518     |      1015.1    |
+|                   |              |            |                 |
+| :---------------: | :----------: | :--------: | :-------------: |
+|     Backbones     | Pre-training | image size | times(ms/image) |
+|     ViT-B-32      |     CLIP     |    256     |      48.33      |
+|     ViT-B-32      |     CLIP     |    512     |      95.74      |
+|     ViT-B-16      |     CLIP     |    256     |      86.68      |
+|     ViT-B-16      |     CLIP     |    512     |      450.5      |
+| ViT-B-16-plus-240 |     CLIP     |    240     |      85.25      |
+| ViT-B-16-plus-240 |     CLIP     |    512     |      506.4      |
+|     ViT-L-14      |     CLIP     |    336     |      266.0      |
+|     ViT-L-14      |     CLIP     |    518     |      933.3      |
+|   ViT-L-14-336    |     CLIP     |    336     |      270.2      |
+|   ViT-L-14-336    |     CLIP     |    518     |      955.3      |
+|  dino_vitbase16   |     DINO     |    256     |      85.97      |
+|  dino_vitbase16   |     DINO     |    512     |      458.5      |
+|   dinov2_vitb14   |   DINO_v2    |    336     |      209.1      |
+|   dinov2_vitb14   |   DINO_v2    |    518     |      755.0      |
+|   dinov2_vitl14   |   DINO_v2    |    336     |      281.4      |
+|   dinov2_vitl14   |   DINO_v2    |    518     |     1015.1      |
 
 <span id='FAQ'/>
 

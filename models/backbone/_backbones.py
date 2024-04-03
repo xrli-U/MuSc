@@ -78,17 +78,7 @@ def load(name):
         patch_size = 14
         
     if 'dinov2' in url:
-        # model = torch.hub.load('facebookresearch/dinov2', name)
-        model = torch.hub.load('/home/robot/.cache/torch/hub/facebookresearch_dinov2_main/', name, source='local')
-        # device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
-        # model = dino_vits.__dict__['vit_base'](patch_size=patch_size)
-        # for p in model.parameters():
-        #     p.requires_grad = False
-        # model.eval()
-        # model.to(device)
-
-        # state_dict = torch.hub.load_state_dict_from_url(url="https://dl.fbaipublicfiles.com/dinov2/" + url)
-        # model.load_state_dict(state_dict, strict=True)
+        model = torch.hub.load('facebookresearch/dinov2', name)
         return model
 
     elif len(url)>0:
