@@ -8,7 +8,18 @@
 
 ### 🧐 论文下载地址： [Arxiv](https://arxiv.org/pdf/2401.16753.pdf) | [OpenReview](https://openreview.net/forum?id=AHgc5SMdtd)
 
+## <a href='#all_catelogue'>**转到目录**</a>
+
+## 🙈TODO list:
+- ⬜️ 使用一些策略降低每张图的推理速度，从955.3ms降低到**249.8ms**。
+- ⬜️ 兼容更多的工业数据集。
+- ⬜️ 兼容更多的视觉特征提取器，如 [Vision Mamba](https://github.com/hustvl/Vim)。
+
 ## 📣更新日志:
+***04/11/2024***
+1. 与CVPR 2024中最新的零样本和少样本方法的结果比较添加到了<a href='#compare_sota'>零样本/少样本方法的对比结果</a>中。
+2. 修复了`models/backbone/_backbones.py`中的一些bug。
+
 ***2024年3月22日***
 1. 我们提供了支持[BTAD](https://ieeexplore.ieee.org/abstract/document/9576231)数据集的运行代码，详见`scripts/musc.sh`。
 2. 我们修改了代码使其支持更大的*batch_size*。
@@ -28,8 +39,8 @@
 
 <span id='compare_sota'/>
 
-## 🎖️Compare with SOTA *k*-shot methods
-我们在下表中展示了我们的MuSc方法与当前最先进的零样本/少样本方法的对比结果，该表格将持续更新。
+## 🎖️与其它零样本/少样本方法的对比结果 <a href='#all_catelogue'>[转到目录]</a>
+我们在下表中展示了我们的MuSc方法与当前最先进的零样本/少样本方法的对比结果，**该表格将持续更新**。
 "-"表示作者在原论文中未提供该指标。
 
 ### MVTec AD
@@ -51,6 +62,8 @@
 | [PromptAD](https://openaccess.thecvf.com/content/WACV2024/papers/Li_PromptAD_Zero-Shot_Anomaly_Detection_Using_Text_Prompts_WACV_2024_paper.pdf) |     WACV 2024      | 0-shot  |      90.8      |     -      |   -    |     92.1     |    36.2     |    -    |   72.8   |
 | [AnomalyCLIP](https://openreview.net/forum?id=buC4E91xZE) |     ICLR 2024      | 0-shot  |      91.5      |     -      |  96.2  |     91.1     |      -      |    -    |   81.4   |
 | [InCTRL](https://arxiv.org/pdf/2403.06495.pdf) |     CVPR 2024      | 8-shot  |      95.3      |     -      |   -    |      -       |      -      |    -    |    -     |
+| [MVFA-AD](https://arxiv.org/pdf/2403.12570.pdf) |     CVPR 2024      | 4-shot  |      96.2      |     -      |   -    |     96.3     |
+| [PromptAD](https://arxiv.org/pdf/2404.05231.pdf) |     CVPR 2024      | 4-shot  |      96.6      |     -      |   -    |     96.5     |      -      |    -    |    -     |
 
 ### VisA
 
@@ -65,6 +78,7 @@
 | [PACKD](https://papers.bmvc2023.org/0259.pdf) |     BMVC 2023      | 8-shot  |      87.5      |     -      |   -    |     97.9     |      -      |    -    |    -     |
 | [AnomalyCLIP](https://openreview.net/forum?id=buC4E91xZE) |     ICLR 2024      | 0-shot  |      82.1      |     -      |  85.4  |     95.5     |      -      |    -    |   87.0   |
 | [InCTRL](https://arxiv.org/pdf/2403.06495.pdf) |     CVPR 2024      | 8-shot  |      88.7      |     -      |   -    |      -       |      -      |    -    |    -     |
+| [PromptAD](https://arxiv.org/pdf/2404.05231.pdf) |     CVPR 2024      | 4-shot  |      89.1      |     -      |   -    |     97.4     |      -      |    -    |    -     |
 
 <span id='all_catelogue'/>
 

@@ -10,7 +10,19 @@ Institutions: <sup>1</sup>Huazhong University of Science and Technology | <sup>2
 
 ### 📖 Chinese [README](./README_cn.md)
 
+## <a href='#all_catelogue'>**Go to Catalogue**</a>
+
+## 🙈TODO list:
+- ⬜️ Using some strategies to reduce the inference time per image from 955.3ms to **249.8ms**.
+- ⬜️ Compatibility with more industrial datasets.
+- ⬜️ Compatibility with more visual backbones, e.g. [Vision Mamba](https://github.com/hustvl/Vim).
+
+
 ## 📣Updates:
+***04/11/2024***
+1. The comparisons with the zero/few-shot methods in CVPR 2024 have been added to <a href='#compare_sota'>Compare with SOTA k-shot Methods.</a>
+2. Fixed some bugs in `models/backbone/_backbones.py`.
+
 ***03/22/2024***
 1. The supported codes for [BTAD](https://ieeexplore.ieee.org/abstract/document/9576231) dataset are provided.
 2. Some codes are modified to support larger *batch_size*.
@@ -31,8 +43,8 @@ Initial commits:
 
 <span id='compare_sota'/>
 
-## 🎖️Compare with SOTA *k*-shot methods
-We will continuously update the following table to compare our MuSc with the newest zero-shot and few-shot methods.
+## 🎖️Compare with SOTA *k*-shot methods <a href='#all_catelogue'>[Go to Catalogue]</a>
+We will **continuously update** the following table to compare our MuSc with the newest zero-shot and few-shot methods.
 "-" indicates that the authors did not measure this metric in their paper.
 
 ### MVTec AD
@@ -54,6 +66,8 @@ We will continuously update the following table to compare our MuSc with the new
 | [PromptAD](https://openaccess.thecvf.com/content/WACV2024/papers/Li_PromptAD_Zero-Shot_Anomaly_Detection_Using_Text_Prompts_WACV_2024_paper.pdf) |     WACV 2024      | 0-shot  |      90.8      |     -      |   -    |     92.1     |    36.2     |    -    |   72.8   |
 | [AnomalyCLIP](https://openreview.net/forum?id=buC4E91xZE) |     ICLR 2024      | 0-shot  |      91.5      |     -      |  96.2  |     91.1     |      -      |    -    |   81.4   |
 | [InCTRL](https://arxiv.org/pdf/2403.06495.pdf) |     CVPR 2024      | 8-shot  |      95.3      |     -      |   -    |      -       |      -      |    -    |    -     |
+| [MVFA-AD](https://arxiv.org/pdf/2403.12570.pdf) |     CVPR 2024      | 4-shot  |      96.2      |     -      |   -    |     96.3     |      -      |    -    |    -     |
+| [PromptAD](https://arxiv.org/pdf/2404.05231.pdf) |     CVPR 2024      | 4-shot  |      96.6      |     -      |   -    |     96.5     |      -      |    -    |    -     |
 
 ### VisA
 
@@ -68,6 +82,7 @@ We will continuously update the following table to compare our MuSc with the new
 | [PACKD](https://papers.bmvc2023.org/0259.pdf) |     BMVC 2023      | 8-shot  |      87.5      |     -      |   -    |     97.9     |      -      |    -    |    -     |
 | [AnomalyCLIP](https://openreview.net/forum?id=buC4E91xZE) |     ICLR 2024      | 0-shot  |      82.1      |     -      |  85.4  |     95.5     |      -      |    -    |   87.0   |
 | [InCTRL](https://arxiv.org/pdf/2403.06495.pdf) |     CVPR 2024      | 8-shot  |      88.7      |     -      |   -    |      -       |      -      |    -    |    -     |
+| [PromptAD](https://arxiv.org/pdf/2404.05231.pdf) |     CVPR 2024      | 4-shot  |      89.1      |     -      |   -    |     97.4     |      -      |    -    |    -     |
 
 <span id='all_catelogue'/>
 
@@ -91,7 +106,7 @@ We will continuously update the following table to compare our MuSc with the new
 
 <span id='abstract'/>
 
-## 👇Abstract: <a href='#all_catelogue'>[Back to Top]</a>
+## 👇Abstract: <a href='#all_catelogue'>[Back to Catalogue]</a>
 
 This paper studies zero-shot anomaly classification (AC) and segmentation (AS) in industrial vision. We reveal that the abundant normal and abnormal cues implicit in unlabeled test images can be exploited for anomaly determination, which is ignored by prior methods. Our key observation is that for the industrial product images, the normal image patches could find a relatively large number of similar patches in other unlabeled images, while the abnormal ones only have a few similar patches. 
 
@@ -111,7 +126,7 @@ The superior performance on the challenging MVTec AD and VisA datasets demonstra
 
 <span id='setup'/>
 
-## 🎯Setup: <a href='#all_catelogue'>[Back to Top]</a>
+## 🎯Setup: <a href='#all_catelogue'>[Back to Catalogue]</a>
 
 ### Environment:
 
@@ -141,7 +156,7 @@ pip install -r requirements.txt
 
 <span id='datasets'/>
 
-## 👇Datasets Download: <a href='#all_catelogue'>[Back to Top]</a>
+## 👇Datasets Download: <a href='#all_catelogue'>[Back to Catalogue]</a>
 
 Put all the datasets in `./data` folder.
 
@@ -205,7 +220,7 @@ data
 
 <span id='run_musc'/>
 
-## 💎Run MuSc: <a href='#all_catelogue'>[Back to Top]</a>
+## 💎Run MuSc: <a href='#all_catelogue'>[Back to Catalogue]</a>
 
 We provide two ways to run our code.
 
@@ -242,7 +257,7 @@ The key arguments of the script are as follows:
 
 <span id='rscin'/>
 
-## 💎Classification optimization (RsCIN): <a href='#all_catelogue'>[Back to Top]</a>
+## 💎Classification optimization (RsCIN): <a href='#all_catelogue'>[Back to Catalogue]</a>
 
 We provide additional code in `./models/RsCIN_features` folder to optimize the classification results of other methods using our RsCIN module. We use **ViT-large-14-336 of CLIP** to extract the image features of the MVTec AD and VisA datasets and store them in `mvtec_ad_cls.dat` and `visa_cls.dat` respectively. We show how to use them in `./models/RsCIN_features/RsCIN.py`.
 
@@ -279,7 +294,7 @@ optimized_classification_results = Mobile_RsCIN(classification_results, k_list=k
 
 <span id='results_datasets'/>
 
-## 🎖️Results of different datasets: <a href='#all_catelogue'>[Back to Top]</a>
+## 🎖️Results of different datasets: <a href='#all_catelogue'>[Back to Catalogue]</a>
 
 All the results are implemented by the default settings in our paper.
 
@@ -336,7 +351,7 @@ All the results are implemented by the default settings in our paper.
 
 <span id='results_backbones'/>
 
-## 🎖️Results of different backbones: <a href='#all_catelogue'>[Back to Top]</a>
+## 🎖️Results of different backbones: <a href='#all_catelogue'>[Back to Catalogue]</a>
 
 The default backbone (feature extractor) in our paper is ViT-large-14-336 of CLIP.
 We also provide the supported codes for other image encoder of CLIP, DINO and DINO_v2.
@@ -412,7 +427,7 @@ For more details, see `configs/musc.yaml`.
 
 <span id='inference_time'/>
 
-## ⌛Inference Time: <a href='#all_catelogue'>[Back to Top]</a>
+## ⌛Inference Time: <a href='#all_catelogue'>[Back to Catalogue]</a>
 
 We show the inference time per image in the table below when using different backbones and image sizes.
 The default setting for number of images in mutual scoring module is **200**, and GPU is NVIDIA RTX 3090.
@@ -439,7 +454,7 @@ The default setting for number of images in mutual scoring module is **200**, an
 
 <span id='FAQ'/>
 
-## 🙋🙋‍♂️Frequently Asked Questions: <a href='#all_catelogue'>[Back to Top]</a>
+## 🙋🙋‍♂️Frequently Asked Questions: <a href='#all_catelogue'>[Back to Catalogue]</a>
 
 Q: Why do large areas of high anomaly scores appear on normal images in the visualization?
 
@@ -454,7 +469,7 @@ The image resolution can be changed by modifying the 'img_resize' parameter in t
 
 <span id='citation'/>
 
-## Citation: <a href='#all_catelogue'>[Back to Top]</a>
+## Citation: <a href='#all_catelogue'>[Back to Catalogue]</a>
 ```
 @inproceedings{Li2024MuSc,
   title={MuSc: Zero-Shot Industrial Anomaly Classification and Segmentation with Mutual Scoring of the Unlabeled Images},
@@ -466,11 +481,11 @@ The image resolution can be changed by modifying the 'img_resize' parameter in t
 
 <span id='thanks'/>
 
-## Thanks: <a href='#all_catelogue'>[Back to Top]</a>
+## Thanks: <a href='#all_catelogue'>[Back to Catalogue]</a>
 
 Our repo is built on [PatchCore](https://github.com/amazon-science/patchcore-inspection) and [APRIL-GAN](https://github.com/ByChelsea/VAND-APRIL-GAN), thanks their clear and elegant code !
 
 <span id='license'/>
 
-## License: <a href='#all_catelogue'>[Back to Top]</a>
+## License: <a href='#all_catelogue'>[Back to Catalogue]</a>
 MuSc is released under the **MIT Licence**, and is fully open for academic research and also allow free commercial usage. To apply for a commercial license, please contact yuzhou@hust.edu.cn.
