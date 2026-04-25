@@ -10,13 +10,17 @@
 
 ## <a href='#all_catelogue'>**转到目录**</a>
 
-## 🙈TODO list:
-- ⬜️ 使用一些策略降低每张图的推理速度，从955.3ms降低到**249.8ms**。
-- ⬜️ 兼容更多的工业数据集。
-- ⬜️ 兼容更多的视觉特征提取器，如 [Vision Mamba](https://github.com/hustvl/Vim)。
-
 ## 📣更新日志:
+****
+
+***04/25/2026***
+
+🎉**Great News!** MuSc的扩展版（MuSc-V2）已经发表到**TPAMI 2026**!
+
+[论文](https://arxiv.org/abs/2511.10047) | [代码](https://github.com/HUST-SLOW/MuSc-V2) 
+
 ***04/11/2024***
+
 1. 与CVPR 2024中最新的零样本和少样本方法的结果比较添加到了<a href='#compare_sota'>零样本/少样本方法的对比结果</a>中。
 2. 修复了`models/backbone/_backbones.py`中的一些bug。
 
@@ -62,7 +66,7 @@
 | [PromptAD](https://openaccess.thecvf.com/content/WACV2024/papers/Li_PromptAD_Zero-Shot_Anomaly_Detection_Using_Text_Prompts_WACV_2024_paper.pdf) |     WACV 2024      | 0-shot  |      90.8      |     -      |   -    |     92.1     |    36.2     |    -    |   72.8   |
 | [AnomalyCLIP](https://openreview.net/forum?id=buC4E91xZE) |     ICLR 2024      | 0-shot  |      91.5      |     -      |  96.2  |     91.1     |      -      |    -    |   81.4   |
 | [InCTRL](https://arxiv.org/pdf/2403.06495.pdf) |     CVPR 2024      | 8-shot  |      95.3      |     -      |   -    |      -       |      -      |    -    |    -     |
-| [MVFA-AD](https://arxiv.org/pdf/2403.12570.pdf) |     CVPR 2024      | 4-shot  |      96.2      |     -      |   -    |     96.3     |
+| [MVFA-AD](https://arxiv.org/pdf/2403.12570.pdf) |     CVPR 2024      | 4-shot  |      96.2      |     -      |   -    |     96.3     |             |         |          |
 | [PromptAD](https://arxiv.org/pdf/2404.05231.pdf) |     CVPR 2024      | 4-shot  |      96.6      |     -      |   -    |     96.5     |      -      |    -    |    -     |
 
 ### VisA

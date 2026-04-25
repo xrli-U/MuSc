@@ -12,13 +12,14 @@ Institutions: <sup>1</sup>Huazhong University of Science and Technology | <sup>2
 
 ## <a href='#all_catelogue'>**Go to Catalogue**</a>
 
-## 🙈TODO list:
-- ⬜️ Using some strategies to reduce the inference time per image from 955.3ms to **249.8ms**.
-- ⬜️ Compatibility with more industrial datasets.
-- ⬜️ Compatibility with more visual backbones, e.g. [Vision Mamba](https://github.com/hustvl/Vim).
-
-
 ## 📣Updates:
+
+***04/25/2026***
+
+🎉**Great News!** The extended version of MuSc has been accepted to **TPAMI 2026**!
+
+[Paper](https://arxiv.org/abs/2511.10047) | [Code](https://github.com/HUST-SLOW/MuSc-V2) 
+
 ***04/11/2024***
 1. The comparisons with the zero/few-shot methods in CVPR 2024 have been added to <a href='#compare_sota'>Compare with SOTA k-shot Methods.</a>
 2. Fixed some bugs in `models/backbone/_backbones.py`.
